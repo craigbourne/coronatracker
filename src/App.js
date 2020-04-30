@@ -7,7 +7,7 @@ class App extends React.Component {
 	async componentDidMount() {
 		const data = await fetchData();
 
-		console.log(data.data);
+		console.log(data);
 	}
 
 	render() {
