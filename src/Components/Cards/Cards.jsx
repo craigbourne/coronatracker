@@ -18,7 +18,9 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 						<Typography color="textSecondary" gutterBottom>
 							Infected
 						</Typography>
-						<Typography variant="h5">{confirmed.value}</Typography>
+						<Typography variant="h5">
+							<CountUp start={0} end={confirmed.value} />
+						</Typography>
 						<Typography color="textSecondary">{lastUpdate}</Typography>
 						<Typography variant="body2">Number of active cases of COVID-19</Typography>
 					</CardContent>
@@ -28,7 +30,9 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 						<Typography color="textSecondary" gutterBottom>
 							Recovered
 						</Typography>
-						<Typography variant="h5">{recovered.value}</Typography>
+						<Typography variant="h5">
+							<CountUp start={0} end={recovered.value} />
+						</Typography>
 						<Typography color="textSecondary">{lastUpdate}</Typography>
 						<Typography variant="body2">Number of recoveries from COVID-19</Typography>
 					</CardContent>
@@ -38,7 +42,9 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
 						<Typography color="textSecondary" gutterBottom>
 							Deaths
 						</Typography>
-						<Typography variant="h5">{deaths.value}</Typography>
+						<Typography variant="h5">
+							<CountUp start={0} end={deaths.value} />
+						</Typography>
 						<Typography color="textSecondary">{lastUpdate}</Typography>
 						<Typography variant="body2">Number of deaths from COVID-19</Typography>
 					</CardContent>
